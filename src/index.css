@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Thai", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Noto Sans Thai", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --museum-white: #ffffff;
+    --museum-offwhite: #f8fafc;
+    --museum-stage: #f0f9ff;
+    --hydro-sky: #0284c7;
+    --hydro-teal: #0d9488;
+    --hydro-navy: #0f172a;
+    --cell-purple: #7c3aed;
+    --cell-pink: #db2777;
+    --nemato-orange: #ea580c;
+    --nemato-red: #dc2626;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #0f172a;
+    scroll-padding-top: 4.5rem;
+    overflow-x: clip;
+  }
+
+  body {
+    overflow-x: clip;
+    background-color: #ffffff;
+  }
+}
+
+.museum-stage-bg {
+  background: radial-gradient(
+    circle at 50% 42%,
+    #eef8ff 0%,
+    #f5faff 38%,
+    #f8fafc 72%,
+    #ffffff 100%
+  );
+}
+
+.museum-glass {
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(203, 213, 225, 0.72);
+  box-shadow: 0 12px 32px -12px rgba(15, 23, 42, 0.08), 0 2px 8px -2px rgba(15, 23, 42, 0.04);
+}
+
+.museum-panel {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 10px 30px -14px rgba(15, 23, 42, 0.07);
+}
+
+/* Custom slim scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
